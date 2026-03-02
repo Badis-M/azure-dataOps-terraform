@@ -38,3 +38,6 @@ terraform.rc
 
 # Ignore sensitive variable files
 credentials.tmp
+
+# Ignore Documentation files
+docs/
