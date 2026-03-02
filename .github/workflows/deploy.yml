@@ -3,6 +3,10 @@ name: 'Azure DataOps Infrastructure'
 on:
   push:
     branches: [ "main" ]
+    paths-ignore:
+      - 'README.md'
+      - 'docs/**'
+      - '.gitignore'
 
 permissions:
   contents: read
