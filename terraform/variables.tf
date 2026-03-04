@@ -9,3 +9,15 @@ variable "location" {
   type        = string
   default     = "West Europe"
 }
+
+variable "sql_admin_login" {
+  description = "Admin login for Azure SQL Database"
+  type        = string
+  default     = "sqladmin"
+}
+
+variable "sql_admin_password" {
+  description = "Admin password for Azure SQL Database (use a secure value in production)"
+  type        = string
+  sensitive = true
+}
