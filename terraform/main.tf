@@ -8,7 +8,7 @@ resource "random_string" "suffix" {
 # 1. Resource Group: The logical container
 resource "azurerm_resource_group" "rg" {
   name     = "rg-${var.project_name}"
-  location = var.location
+  location = "North Europe"
 }
 
 # 2. Storage Account: Configured as ADLS Gen2
@@ -29,7 +29,7 @@ resource "azurerm_storage_account" "datalake" {
 # 3. Storage Container: Our 'Raw' data landing zone
 resource "azurerm_storage_container" "raw_zone" {
   name                  = "raw-data"
-  storage_account_name  = azurerm_storage_account.datalake.name
+  storage_account_id  = azurerm_storage_account.datalake.id
   container_access_type = "private"
 }
 
